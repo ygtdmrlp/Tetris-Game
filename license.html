@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License - Android Tetris</title>
+    <style>
+        body {
+            background-color: #2C3E50;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .menu-bar {
+            width: 100%;
+            background-color: #34495E;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .menu-items {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .menu-items a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .menu-items a:hover {
+            background-color: #2C3E50;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #34495E;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+        pre {
+            background-color: #2C3E50;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        .language-buttons {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-btn {
+            background-color: #2C3E50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin-left: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .lang-btn:hover {
+            background-color: #243442;
+        }
+        .lang-btn.active {
+            background-color: #16A085;
+        }
+        .content-tr, .content-en {
+            transition: opacity 0.3s;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <div class="menu-items">
+            <a href="index.html">Game</a>
+            <a href="license.html">License</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="language-buttons">
+            <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+            <button class="lang-btn" onclick="switchLanguage('tr')">Türkçe</button>
+        </div>
+
+        <div class="content-en">
+            <h1>MIT License</h1>
+            <pre>
+MIT License
+
+Copyright (c) 2025
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+            </pre>
+        </div>
+
+        <div class="content-tr hidden">
+            <h1>MIT Lisansı</h1>
+            <pre>
+MIT Lisansı
+
+Telif Hakkı (c) 2025
+
+İşbu belgeyle, bu yazılımın ve ilgili belgelendirme dosyalarının ("Yazılım") bir kopyasını
+edinen herkese, kullanım, kopyalama, değiştirme, birleştirme, yayımlama, dağıtma, 
+alt lisanslama ve/veya yazılımın kopyalarını satma hakları da dahil olmak üzere ve 
+bununla kısıtlama olmaksızın, Yazılım ile ilgili herhangi bir kısıtlama olmaksızın 
+işlem yapma izni verilmektedir. Bunu yapacak kişiler için tek şart aşağıdaki koşulları 
+sağlamaktır:
+
+Yukarıdaki telif hakkı bildirimi ve işbu izin bildirimi, Yazılımın tüm kopyalarına 
+veya önemli parçalarına eklenmelidir.
+
+YAZILIM "HİÇBİR DEĞİŞİKLİK YAPILMADAN" ESASINA BAĞLI OLARAK, TİCARETE ELVERİŞLİLİK,
+ÖZEL BİR AMACA UYGUNLUK VE İHLAL OLMAMASI DA DAHİL VE BUNUNLA KISITLI OLMAKSIZIN 
+AÇIKÇA VEYA ÜSTÜ KAPALI OLARAK HİÇBİR TEMİNAT OLMAKSIZIN SUNULMUŞTUR. HİÇBİR 
+KOŞULDA YAZARLAR VEYA TELİF HAKKI SAHİPLERİ HERHANGİ BİR İDDİAYA, HASARA VEYA 
+DİĞER YÜKÜMLÜLÜKLERE KARŞI, YAZILIMLA VEYA KULLANIMLA VEYA YAZILIMIN BAŞKA 
+BAĞLANTILARIYLA İLGİLİ, BUNLARDAN KAYNAKLANAN VE BUNLARIN SONUCU BİR SÖZLEŞME 
+DAVASI, HAKSIZ FİİL VEYA DİĞER EYLEMLERDEN SORUMLU DEĞİLDİR.
+            </pre>
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            const enContent = document.querySelector('.content-en');
+            const trContent = document.querySelector('.content-tr');
+            const buttons = document.querySelectorAll('.lang-btn');
+            
+            if (lang === 'en') {
+                enContent.classList.remove('hidden');
+                trContent.classList.add('hidden');
+            } else {
+                enContent.classList.add('hidden');
+                trContent.classList.remove('hidden');
+            }
+
+            // Update button styles
+            buttons.forEach(btn => {
+                if (btn.textContent.toLowerCase().includes(lang)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

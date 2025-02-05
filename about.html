@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Android Tetris</title>
+    <style>
+        body {
+            background-color: #2C3E50;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .menu-bar {
+            width: 100%;
+            background-color: #34495E;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .menu-items {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .menu-items a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .menu-items a:hover {
+            background-color: #2C3E50;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #34495E;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+        .developer-info {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #2C3E50;
+            border-radius: 5px;
+        }
+        .language-buttons {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-btn {
+            background-color: #2C3E50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin-left: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .lang-btn:hover {
+            background-color: #243442;
+        }
+        .lang-btn.active {
+            background-color: #16A085;
+        }
+        .content-tr, .content-en {
+            transition: opacity 0.3s;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <div class="menu-items">
+            <a href="index.html">Game</a>
+            <a href="license.html">License</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="language-buttons">
+            <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+            <button class="lang-btn" onclick="switchLanguage('tr')">Türkçe</button>
+        </div>
+
+        <div class="content-en">
+            <h1>About Android Tetris</h1>
+            <p>This is a modern implementation of the classic Tetris game, designed with an Android-like interface. The game features a clean, material design inspired look and responsive controls.</p>
+            
+            <h2>Features</h2>
+            <ul>
+                <li>Modern, Android-style interface</li>
+                <li>Next piece preview</li>
+                <li>Score tracking</li>
+                <li>Responsive design</li>
+                <li>Keyboard controls</li>
+            </ul>
+
+            <div class="developer-info">
+                <h2>Developer Information</h2>
+                <p>Created in 2025</p>
+                <p>This game is open source and available under the MIT License. Feel free to contribute to the project or use the code in your own projects.</p>
+            </div>
+
+            <h2>How to Play</h2>
+            <ul>
+                <li>Use left and right arrow keys to move pieces</li>
+                <li>Up arrow key to rotate pieces</li>
+                <li>Down arrow key to make pieces fall faster</li>
+                <li>Clear lines to score points</li>
+                <li>Game ends when pieces stack to the top</li>
+            </ul>
+        </div>
+
+        <div class="content-tr hidden">
+            <h1>Android Tetris Hakkında</h1>
+            <p>Bu, klasik Tetris oyununun Android benzeri bir arayüzle tasarlanmış modern bir uygulamasıdır. Oyun, material design'dan ilham alan temiz bir görünüm ve duyarlı kontroller içerir.</p>
+            
+            <h2>Özellikler</h2>
+            <ul>
+                <li>Modern, Android tarzı arayüz</li>
+                <li>Sonraki parça önizlemesi</li>
+                <li>Puan takibi</li>
+                <li>Duyarlı tasarım</li>
+                <li>Klavye kontrolleri</li>
+            </ul>
+
+            <div class="developer-info">
+                <h2>Geliştirici Bilgileri</h2>
+                <p>2025 yılında oluşturuldu</p>
+                <p>Bu oyun açık kaynaklıdır ve MIT Lisansı altında kullanıma sunulmuştur. Projeye katkıda bulunabilir veya kodu kendi projelerinizde kullanabilirsiniz.</p>
+            </div>
+
+            <h2>Nasıl Oynanır</h2>
+            <ul>
+                <li>Parçaları hareket ettirmek için sol ve sağ ok tuşlarını kullanın</li>
+                <li>Parçaları döndürmek için yukarı ok tuşunu kullanın</li>
+                <li>Parçaları daha hızlı düşürmek için aşağı ok tuşunu kullanın</li>
+                <li>Puan kazanmak için satırları temizleyin</li>
+                <li>Parçalar üst kısma ulaştığında oyun biter</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            const enContent = document.querySelector('.content-en');
+            const trContent = document.querySelector('.content-tr');
+            const buttons = document.querySelectorAll('.lang-btn');
+            
+            if (lang === 'en') {
+                enContent.classList.remove('hidden');
+                trContent.classList.add('hidden');
+            } else {
+                enContent.classList.add('hidden');
+                trContent.classList.remove('hidden');
+            }
+
+            // Update button styles
+            buttons.forEach(btn => {
+                if (btn.textContent.toLowerCase().includes(lang)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
