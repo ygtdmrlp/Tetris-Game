@@ -1,4 +1,4 @@
-# Android Style Tetris Game 🎮 | Android Tarzı Tetris Oyunu 🎮
+# Html Tetris Game 🎮 | Android Tarzı Tetris Oyunu 🎮
 
 [English](#english) | [Türkçe](#türkçe)
 
