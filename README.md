@@ -29,3 +29,36 @@ A modern implementation of the classic Tetris game with an Android-style materia
 1. Clone the repository:
 ```bash
 git clone https://github.com/ygtdmrlp/
+
+
+# Android Tarzı Tetris Oyunu 🎮 | Android Style Tetris Game 🎮
+
+[Türkçe](#türkçe) | [English](#english)
+
+![Tetris Oyunu Ekran Görüntüsü](screenshot.png)
+
+## Türkçe
+
+### 📱 Hakkında
+Modern bir tasarıma sahip, Android tarzında geliştirilmiş klasik Tetris oyunu. HTML5, CSS3 ve JavaScript kullanılarak oluşturulmuş olup, kullanıcı dostu ve responsive bir oyun deneyimi sunar.
+
+### ✨ Özellikler
+- 🎯 Android material tasarım arayüzü
+- 🎲 Sıradaki parça gösterimi
+- 📊 Anlık puan takibi
+- 🏆 En yüksek 5 skor kaydı
+- 📱 Mobil uyumlu tasarım
+- 🎮 Kolay kullanım
+- 🌍 Türkçe ve İngilizce dil desteği
+
+### 🎮 Oyun Kontrolleri
+- **←** ve **→** tuşları: Parçaları sağa/sola hareket ettirme
+- **↑** tuşu: Parçayı döndürme
+- **↓** tuşu: Parçayı hızlı düşürme
+- Satır tamamlandığında puan kazanırsınız
+- Parçalar tepeye ulaştığında oyun biter
+
+### 💻 Kurulum
+1. Projeyi bilgisayarınıza indirin:
+```bash
+git clone https://github.com/ygtdmrlp/
